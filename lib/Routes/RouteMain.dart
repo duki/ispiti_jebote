@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:ispiti_jebote/Routes/RouteCourseCreate.dart';
 import 'package:ispiti_jebote/Routes/RouteCoursePicker.dart';
 import 'package:ispiti_jebote/Routes/RouteLinks.dart';
 import 'package:ispiti_jebote/Routes/RouteStudentCreate.dart';
@@ -217,12 +218,26 @@ class MyHomePageState extends State<MyHomePage> {
               }),
           ListTile(
               title: Text(
+                "Add a course",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+              subtitle: Text("And add it to the observer"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RouteCourseCreate()),
+                );
+              }),
+          ListTile(
+              title: Text(
                 "Links",
                 style: TextStyle(
                   fontSize: 20,
                 ),
               ),
-              subtitle: Text("laziness 100"),
+              subtitle: Text("you lazy fock"),
               onTap: () {
                 Navigator.push(
                   context,

@@ -35,6 +35,16 @@ class CourseInfoStore {
     await file.writeAsString(newFileContents);
   }
 
+  Future <void> addCourse(Course course) async {
+    final file = await _localFile;
+    final String fileContents = await file.readAsString();
+    List<dynamic> courses = jsonDecode(fileContents);
+    courses.add(course.toMap());
+    print("added new course to tracklist");
+    final String newFileContents = jsonEncode(courses);
+    await file.writeAsString(newFileContents);
+  }
+
   Future<void> untrackCourse(Course course) async {
     final file = await _localFile;
     final String fileContents = await file.readAsString();
@@ -43,10 +53,8 @@ class CourseInfoStore {
       Course tmpcourse = Course.fromJson(courses[i]);
       if (tmpcourse == course) {
         courses[i]['tracked'] = false;
-        break;
       }
     }
-
     print("stopping > " + course.courseName);
     final String newFileContents = jsonEncode(courses);
     await file.writeAsString(newFileContents);
