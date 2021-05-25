@@ -1,2 +1,5 @@
 # ispiti_jebote
-ispiti. jebote.
+|||
+|---|---|
+|<img src="https://github.com/duki/ispiti_jebote/blob/master/screenshots/1.jpg" alt="drawing" width="250" style="display:block"/>| <img src="https://github.com/duki/ispiti_jebote/blob/master/screenshots/2.jpg" alt="drawing" width="250" style="display:block"/>|
+|<img src="https://github.com/duki/ispiti_jebote/blob/master/screenshots/3.jpg" alt="drawing" width="250" style="display:block"/>|<img src="https://github.com/duki/ispiti_jebote/blob/master/screenshots/4.jpg" alt="drawing" width="250" style="display:block"/>|
